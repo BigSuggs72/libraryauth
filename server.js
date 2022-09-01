@@ -1,4 +1,3 @@
-// LearnWithLeon - Class 50: 8/30/2022 at 6:30pm : Auth & Projects! !100Devs 
 
 const express = require('express')
 const app = express()
@@ -10,7 +9,7 @@ const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
-const todoRoutes = require('./routes/todos')
+const bookRoutes = require('./routes/books')
 
 require('dotenv').config({path: './config/.env'})
 
@@ -33,16 +32,16 @@ app.use(
       store: new MongoStore({ mongooseConnection: mongoose.connection }),
     })
   )
-  
+
 // Passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
-  
+
 app.use('/', mainRoutes)
-app.use('/todos', todoRoutes)
- 
+app.use('/books', bookRoutes)
+
 app.listen(process.env.PORT, ()=>{
-    console.log('Server is running, you better catch it!')
-})    
+    console.log(`Server is, you better catch it!`)
+})
