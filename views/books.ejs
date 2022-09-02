@@ -8,24 +8,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Books</h1>
-    <ul>
-    <% books.forEach( el => { %>
-            <li class='bookItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.book %></span>
-                <span class='del'> Delete </span>
+    <section class="layout">
+        <h1>Books</h1>
+        <ul class="book-list">
+            <% todoTasks.forEach(data=> {%>
+            <li class="todo-list-item">
+                <div class="todo-list-item-title">
+                    <%= data.title %>
+                </div>
+                <div class="todo-list-item-content">
+                    <%= data.content %>
+                </div>
+                <!-- <a href="/edit/<%=data._id %>" class="edit"><span class="fas fa-edit"></span></a>
+                <a href="/edit/remove/<%=data._id %>" class="remove"><span class="fas fa-times"></span></a> -->
             </li>
-    <% }) %>
-    </ul>
+            <% }) %>
+        </ul>
+        <!-- <ul>
+        <% books.forEach( el => { %>
+                <li class='bookItem' data-id='<%=el._id%>'>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.book %></span>
+                    <span class='del'> Delete </span>
+                </li>
+        <% }) %>
+        </ul>
 
-    <h2><%= user.userName %> has <%= left %> books left to read.</h2>
+        <h2><%= user.userName %> has <%= left %> books left to read.</h2> -->
 
-    <form action="/books/createBook" method='POST'>
-        <input type="text" placeholder="Enter Book Name" name='bookItem'>
+        <form action="/books/createBook" method='POST'>
+            <input type="text" placeholder="Enter Book Name" name='bookItem'>
         <input type="submit">
-    </form>
+        </form>
+        <a href="/logout">Logout</a>   
+    </section>
 
-    <a href="/logout">Logout</a>
+
 
     <script src="js/main.js"></script>
 </body>

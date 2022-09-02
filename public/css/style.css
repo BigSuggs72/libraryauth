@@ -7,11 +7,6 @@
 body {
     background: rgb(175, 175, 191);
     font-family: "Edu TAS Beginner", sans-serif;
-    /* background-image: url("../images/books.jpg"); */
-    background-repeat: no-repeat;
-    background-position: 0 20%;
-    background-size: 95% 100%;
-    background-size: cover;
 }
 
 .layout {
