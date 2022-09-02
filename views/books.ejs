@@ -22,7 +22,11 @@
     <h2><%= user.userName %> has <%= left %> books left to read.</h2>
 
     <form action="/books/createBook" method='POST'>
-        <input type="text" placeholder="Enter Book Title" name='bookItem'>
+        <input type="text" placeholder="Enter Book Title" name='bookItem' required>
+        <input type="text" placeholder="Enter Book Author" name='bookAuthor' required>
+        <input type="text" placeholder="Enter Book Description" name='bookDescription'>
+        <input type="text" placeholder="Enter Book Subject or Genre" name='bookSubjects'>
+        <input type="text" placeholder="Enter Notes" name='bookNotes'>
         <input type="submit">
     </form>
 
