@@ -5,7 +5,7 @@ module.exports = {
         console.log(req.user)
         try{
             const bookItems = await Book.find({userId:req.user.id})
-            const booksLeft = await Book.countDocuments({userId:req.user.id,checkedout: false})
+            const booksLeft = await Book.countDocuments({userId:req.user.id, checkedout: false})
             res.render('books.ejs', {books: bookItems, left: booksLeft, user: req.user})
         }catch(err){
             console.log(err)
@@ -13,8 +13,12 @@ module.exports = {
     },
     createBook: async (req, res)=>{
         try{
-            await Book.create({ title: req.body.bookItem, 
-                                checkedOut: false, 
+            await Book.create({ title: req.body.bookItem,
+                                author: req.body.bookAuthor,
+                                description: req.body.bookDescription,
+                                subjects: req.body.bookSubjects,
+                                notes: req.body.bookNotes,
+                                checkedOut: false,
                                 userId: req.user.id})
             console.log('Book has been added!')
             res.redirect('/books')
@@ -25,7 +29,7 @@ module.exports = {
     markCheckedOut: async (req, res)=>{
         try{
             await Book.findOneAndUpdate({_id:req.body.bookIdFromJSFile},{
-                checkedOut: true
+                checkedout: true
             })
             console.log('Marked Complete')
             res.json('Marked Complete')
@@ -36,7 +40,7 @@ module.exports = {
     markIncomplete: async (req, res)=>{
         try{
             await Book.findOneAndUpdate({_id:req.body.bookIdFromJSFile},{
-                checkedOut: false
+                checkedout: false
             })
             console.log('Marked Incomplete')
             res.json('Marked Incomplete')
