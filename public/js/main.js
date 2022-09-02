@@ -1,6 +1,6 @@
 const deleteBtn = document.querySelectorAll('.del')
-const bookItem = document.querySelectorAll('span.not')
-const bookComplete = document.querySelectorAll('span.completed')
+const bookItem = document.querySelectorAll('span.checkedIn')
+const bookComplete = document.querySelectorAll('span.checkedOut')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteBook)
