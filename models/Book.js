@@ -25,7 +25,7 @@ const BookSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    checkedout: {
+    checkedOut: {
         type: Boolean,
         required: false
     },
