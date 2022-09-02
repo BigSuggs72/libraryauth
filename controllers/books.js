@@ -6,6 +6,7 @@ module.exports = {
         try{
             const bookItems = await Book.find({userId:req.user.id})
             const booksLeft = await Book.countDocuments({userId:req.user.id, checkedout: false})
+            console.log('books: ' + booksLeft)
             res.render('books.ejs', {books: bookItems, left: booksLeft, user: req.user})
         }catch(err){
             console.log(err)
@@ -18,7 +19,7 @@ module.exports = {
                                 description: req.body.bookDescription,
                                 subjects: req.body.bookSubjects,
                                 notes: req.body.bookNotes,
-                                checkedOut: false,
+                                checkedout: false,
                                 userId: req.user.id})
             console.log('Book has been added!')
             res.redirect('/books')
