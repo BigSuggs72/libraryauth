@@ -12,7 +12,8 @@
     <ul>
     <% books.forEach( el => { %>
             <li class='bookItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.book %></span>
+                <span><%= el.title %></span>
+                <span class='checker <%= el.checkedOut === true ? 'completed' : 'not'%>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available' %></span>
                 <span class='del'> Delete </span>
             </li>
     <% }) %>
@@ -21,7 +22,7 @@
     <h2><%= user.userName %> has <%= left %> books left to read.</h2>
 
     <form action="/books/createBook" method='POST'>
-        <input type="text" placeholder="Enter Book Name" name='bookItem'>
+        <input type="text" placeholder="Enter Book Title" name='bookItem'>
         <input type="submit">
     </form>
 

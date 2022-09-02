@@ -7,7 +7,7 @@ Array.from(deleteBtn).forEach((el)=>{
 })
 
 Array.from(bookItem).forEach((el)=>{
-    el.addEventListener('click', markComplete)
+    el.addEventListener('click', markCheckedOut)
 })
 
 Array.from(bookComplete).forEach((el)=>{
@@ -32,10 +32,10 @@ async function deleteBook(){
     }
 }
 
-async function markComplete(){
+async function markCheckedOut(){
     const bookId = this.parentNode.dataset.id
     try{
-        const response = await fetch('books/markComplete', {
+        const response = await fetch('books/markCheckedOut', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
