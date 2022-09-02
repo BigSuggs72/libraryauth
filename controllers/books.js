@@ -18,7 +18,7 @@ module.exports = {
                                 description: req.body.bookDescription,
                                 subjects: req.body.bookSubjects,
                                 notes: req.body.bookNotes,
-                                checkedout: false,
+                                checkedOut: false,
                                 userId: req.user.id})
             console.log('Book has been added!')
             res.redirect('/books')
