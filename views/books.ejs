@@ -13,7 +13,7 @@
     <% books.forEach( el => { %>
             <li class='bookItem' data-id='<%=el._id%>'>
                 <span><%= el.title %></span>
-                <span class='checker <%= el.checkedOut === true ? 'completed' : 'not'%>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available' %></span>
+                <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn' %>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
                 <span class='del'> Delete </span>
             </li>
     <% }) %>
