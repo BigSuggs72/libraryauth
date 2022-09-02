@@ -7,11 +7,6 @@
 body {
     background: rgb(175, 175, 191);
     font-family: "Edu TAS Beginner", sans-serif;
-    /* background-image: url("../images/books.jpg"); */
-    background-repeat: no-repeat;
-    background-position: 0 20%;
-    background-size: 95% 100%;
-    background-size: cover;
 }
 
 .layout {
@@ -39,41 +34,8 @@ a {
     font-size: 1rem;
 }
 
-#books-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-input {
-  margin: 2px 0;
-}
-
-.bookItem {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-.reading-status {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  background: red;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.completed {
-    background: green;
-}
-.not{
-    background: red;
+/*checkedOut spans*/
+.checker:hover {
+    cursor: pointer;
 }

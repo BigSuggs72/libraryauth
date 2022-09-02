@@ -1,5 +1,5 @@
 {
-  "name": "Library",
+  "name": "libraryauth",
   "version": "1.0.0",
   "description": "Group project assigned on 8/30/22 and due on 9/6/22",
   "main": "server.js",
