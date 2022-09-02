@@ -13,17 +13,19 @@ module.exports = {
     },
     createBook: async (req, res)=>{
         try{
-            await Book.create({book: req.body.bookItem, completed: false, userId: req.user.id})
+            await Book.create({ title: req.body.bookItem, 
+                                checkedOut: false, 
+                                userId: req.user.id})
             console.log('Book has been added!')
             res.redirect('/books')
         }catch(err){
             console.log(err)
         }
     },
-    markComplete: async (req, res)=>{
+    markCheckedOut: async (req, res)=>{
         try{
             await Book.findOneAndUpdate({_id:req.body.bookIdFromJSFile},{
-                completed: true
+                checkedOut: true
             })
             console.log('Marked Complete')
             res.json('Marked Complete')
@@ -34,7 +36,7 @@ module.exports = {
     markIncomplete: async (req, res)=>{
         try{
             await Book.findOneAndUpdate({_id:req.body.bookIdFromJSFile},{
-                completed: false
+                checkedOut: false
             })
             console.log('Marked Incomplete')
             res.json('Marked Incomplete')

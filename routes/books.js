@@ -7,7 +7,7 @@ router.get('/', ensureAuth, booksController.getBooks)
 
 router.post('/createBook', booksController.createBook)
 
-router.put('/markComplete', booksController.markComplete)
+router.put('/markCheckedOut', booksController.markCheckedOut)
 
 router.put('/markIncomplete', booksController.markIncomplete)
 

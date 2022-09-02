@@ -33,3 +33,9 @@ a {
     padding: 20px;
     font-size: 1rem;
 }
+
+
+/*checkedOut spans*/
+.checker:hover {
+    cursor: pointer; 
+}
