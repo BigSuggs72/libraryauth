@@ -7,7 +7,7 @@ const BookSchema = new mongoose.Schema({
   }, 
   author: {
     type: String,
-    required: true
+    required: false
   },
   title: {
     type: String,
@@ -19,15 +19,15 @@ const BookSchema = new mongoose.Schema({
   },
   subjects: {
     type: String,
-    required: true
+    required: false
   },
   notes: {
     type: String,
     required: false
   },
-  checkedout: {
+  checkedOut: {
     type: Boolean,
-    required: true
+    required: false
   },
   date: {
     type: Date,
