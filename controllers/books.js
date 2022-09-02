@@ -5,7 +5,7 @@ module.exports = {
         console.log(req.user)
         try{
             const bookItems = await Book.find({userId:req.user.id})
-            const booksLeft = await Book.countDocuments({userId:req.user.id, checkedout: false})
+            const booksLeft = await Book.countDocuments({userId:req.user.id, checkedOut: false})
             res.render('books.ejs', {books: bookItems, left: booksLeft, user: req.user})
         }catch(err){
             console.log(err)
@@ -29,7 +29,7 @@ module.exports = {
     markCheckedOut: async (req, res)=>{
         try{
             await Book.findOneAndUpdate({_id:req.body.bookIdFromJSFile},{
-                checkedout: true
+                checkedOut: true
             })
             console.log('Marked Complete')
             res.json('Marked Complete')
@@ -40,7 +40,7 @@ module.exports = {
     markIncomplete: async (req, res)=>{
         try{
             await Book.findOneAndUpdate({_id:req.body.bookIdFromJSFile},{
-                checkedout: false
+                checkedOut: false
             })
             console.log('Marked Incomplete')
             res.json('Marked Incomplete')
