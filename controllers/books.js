@@ -4,16 +4,17 @@ module.exports = {
     getBooks: async (req,res)=>{
         console.log(req.user)
         try{
-            const bookItems = await Book.find({userId:req.user.id})
+            const bookItems = await Book.find({userId:req.user.id}).sort({completed: 'asc'})
             const booksLeft = await Book.countDocuments({userId:req.user.id,completed: false})
-            res.render('books.ejs', {books: bookItems, left: booksLeft, user: req.user})
+            const booksRead = await Book.countDocuments({userId:req.user.id,completed: true})
+            res.render('books.ejs', {books: bookItems, read: booksRead, left: booksLeft, user: req.user})
         }catch(err){
             console.log(err)
         }
     },
     createBook: async (req, res)=>{
         try{
-            await Book.create({book: req.body.bookItem, completed: false, userId: req.user.id})
+            await Book.create({book: req.body.bookItem, bookAuthor: req.body.bookAuthor, bookGenre: req.body.bookGenre, completed: false, userId: req.user.id})
             console.log('Book has been added!')
             res.redirect('/books')
         }catch(err){

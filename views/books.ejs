@@ -8,24 +8,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Books</h1>
-    <ul>
+  <section id="books-main">
+    <h1 class="book-display">Books</h1>
+    <ul id="books-ul">
     <% books.forEach( el => { %>
             <li class='bookItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.book %></span>
-                <span class='del'> Delete </span>
+                <span><%= el.book %> - <%= el.bookAuthor %> - <%= el.bookGenre %></span>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%> reading-status'></span>
+                <span class="del">Delete</span>
             </li>
     <% }) %>
     </ul>
 
+    <h2><%= user.userName %> has read <%= read %> books.</h2>
     <h2><%= user.userName %> has <%= left %> books left to read.</h2>
 
+
     <form action="/books/createBook" method='POST'>
-        <input type="text" placeholder="Enter Book Name" name='bookItem'>
+        <input type="text" placeholder="Enter Book Name" name='bookItem' required>
+        <input type="text" placeholder="Author's Name" name="bookAuthor" required>
+        <input type="text" placeholder="Book Genre" name="bookGenre" required>
         <input type="submit">
     </form>
 
     <a href="/logout">Logout</a>
+  </section>
 
     <script src="js/main.js"></script>
 </body>

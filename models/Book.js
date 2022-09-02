@@ -5,6 +5,14 @@ const BookSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  bookAuthor: {
+    type: String,
+    required: true,
+  },
+  bookGenre: {
+    type: String,
+    required: true,
+  },
   completed: {
     type: Boolean,
     required: true,
