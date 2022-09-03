@@ -89,6 +89,26 @@ footer a:visited {
   color: #fff;
 }
 
+.btn-link {
+  background: #8be1f0;
+  color: #000;
+  border-radius: 10px;
+  padding: .5rem 1.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  background: #ade0e9;
+  color: #000;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
 /* styling for Index page */
 
 .hero {
@@ -104,28 +124,6 @@ h1 {
   padding: 10px;
   font-size: 4rem;
 }
-
-.btn-primary {
-  background: #8be1f0;
-  color: #000;
-  border-radius: 10px;
-  padding: .5rem 1.5rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.btn-primary:hover {
-  background: #ade0e9;
-  color: #000;
-}
-
-.btn-group {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-
 
 /* styling for Books page */
 
