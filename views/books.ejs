@@ -47,8 +47,8 @@
                   <li class='book-list' data-id='<%=el._id%>'>
                     <span id="title"><%= el.title %></span>
                     <span id="author"><%= el.author %></span>
-                    <span id='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn' %>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
-                    <span id='del'> Delete </span>
+                    <span id='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn'%>'>Checkout Status:<%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
+                    <span class='del'> Delete </span>
                   </li>
                   <% }) %>
               </ul>
