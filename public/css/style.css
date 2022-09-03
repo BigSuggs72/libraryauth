@@ -54,9 +54,10 @@ nav a:visited {
 
 /* styling for Index page */
 
-.layout {
+.hero {
   color: white;
   width: 600px;
+  margin-top: 4rem; /* to clear space for fixed header */
   position: absolute;
   top: 20%;
   left: 50%;

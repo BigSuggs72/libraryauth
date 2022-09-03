@@ -37,6 +37,12 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+// Lets you access currentUser in ejs files (to change the navbar links based on whether a user is signed in)
+app.use(function(req, res, next) {
+  res.locals.currentUser = req.user;
+  next();
+});
+
 app.use(flash())
 
 app.use('/', mainRoutes)
