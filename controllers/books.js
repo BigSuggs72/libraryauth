@@ -5,8 +5,8 @@ module.exports = {
         console.log(req.user)
         try{
             const bookItems = await Book.find({userId:req.user.id})
-            const booksLeft = await Book.countDocuments({userId:req.user.id, checkedOut: false})
-            res.render('books.ejs', {books: bookItems, left: booksLeft, user: req.user})
+            const booksAvailable = await Book.countDocuments({userId:req.user.id, checkedOut: false})
+            res.render('books.ejs', {books: bookItems, left: booksAvailable, user: req.user})
         }catch(err){
             console.log(err)
         }

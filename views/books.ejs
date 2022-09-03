@@ -12,7 +12,7 @@
     <section class="row">
         <section class="column">
               <h1>Books</h1>       
-              <h2 class="left"><%= user.userName %> has <%= left %> <%= left === 1 ? 'book' : 'books'%> available.</h2>
+              <h2 class="available"><%= user.userName %> has <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
               <form id="book-form" action="/books/createBook" method='POST'>
               <h2>Add a Book</h2>
                 <div>
