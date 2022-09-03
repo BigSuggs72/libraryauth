@@ -5,49 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Books</h1>
-    <ul>
-    <% books.forEach( el => { %>
-            <li class='bookItem' data-id='<%=el._id%>'>
-                <span><%= el.title %></span>
-                <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn' %>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>
-    </ul>
+    <section class="row">
+        <section class="column">
+              <h1>Books</h1>       
+              <h2 class="left"><%= user.userName %> has <%= left %> books available.</h2>
+              <form id="book-form" action="/books/createBook" method='POST'>
+              <h2>Add a Book</h2>
+                <div>
+                  <label for="bookItem">Book Title:</label>
+                  <input type="text" placeholder="Title" id="bookItem" name='bookItem' required>
+                </div>
+                <div>
+                  <label for="bookAuthor">Book Author:</label>
+                  <input type="text" placeholder="Author's Name" id="bookAuthor" name='bookAuthor' required>
+                </div>
+                <div>
+                  <label for="bookDescription">Book Description:</label>
+                  <input type="text" placeholder="Description" id="bookDescription" name='bookDescription'>
+                </div>
+                <div>
+                  <label for="bookSubjects">Book Genre/Subjects:</label>
+                  <input type="text" placeholder="Subject or Genre" id="bookSubjects" name='bookSubjects'>
+                </div>
+                <div>
+                  <label for="bookNotes">Notes about Book:</label>
+                  <input type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
+                </div>
+                  <input id="books-submit-button" type="submit">
+                </form>
 
-    <h2><%= user.userName %> has <%= left %> books available.</h2>
-
-    <form id="book-form" action="/books/createBook" method='POST'>
-        <h2>Add a Book</h2>
-        <div>
-          <label for="bookItem">Book Title:</label>
-          <input type="text" placeholder="Title" id="bookItem" name='bookItem' required>
-        </div>
-        <div>
-          <label for="bookAuthor">Book Author:</label>
-          <input type="text" placeholder="Author's Name" id="bookAuthor" name='bookAuthor' required>
-        </div>
-        <div>
-          <label for="bookDescription">Book Description:</label>
-          <input type="text" placeholder="Description" id="bookDescription" name='bookDescription'>
-        </div>
-        <div>
-          <label for="bookSubjects">Book Genre/Subjects:</label>
-          <input type="text" placeholder="Subject or Genre" id="bookSubjects" name='bookSubjects'>
-        </div>
-        <div>
-          <label for="bookNotes">Notes about Book:</label>
-          <input type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
-        </div>
-        <input id="books-submit-button" type="submit">
-    </form>
-
-    <a href="/logout">Logout</a>
-
+                <a href="/logout">Logout</a>
+        </section>
+        <section class="column">
+              <h2 class="inventory">Catalogue:</h2>
+              <ul>
+                  <% books.forEach( el => { %>
+                  <li class='book-list' data-id='<%=el._id%>'>
+                    <span id="title"><%= el.title %></span>
+                    <span id="author"><%= el.author %></span>
+                    <span id='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn' %>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
+                    <span id='del'> Delete </span>
+                  </li>
+                  <% }) %>
+              </ul>
+        </section>
+    </section>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,71 +1,142 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: rgb(175, 175, 191);
-    font-family: "Edu TAS Beginner", sans-serif;
+  background: rgb(175, 175, 191);
+  font-family: "Edu TAS Beginner", sans-serif;
 }
 
+
+/* styling for Index page */
+
 .layout {
-    color: white;
-    width: 600px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 600px;
-    padding: 20px;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  color: white;
+  width: 600px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 600px;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 4rem;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 4rem;
 }
 
 a {
-    padding: 20px;
-    font-size: 1rem;
+  padding: 20px;
+  font-size: 1rem;
 }
 
-/* styling for book submit form */
+
+
+/* styling for Books page */
+
+.row{
+display: flex;
+}
+
+.column {
+flex: 50%;
+padding-left: 2%;
+}
+
+.inventory {
+margin-top: 120px;
+padding-bottom: 10px;
+}
+
+.book-list {
+list-style: none;
+}
+
+#title, #author, #checker, #del {
+padding-right: 20px;
+}
+
 
 #book-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: white;
-  border-radius: 5px;
-  width: 95%;
-  max-width: 500px;
-  margin: 10px 0;
-  -moz-box-shadow: 0 0 10px 2px gray;
-  -webkit-box-shadow: 0 0 10px 2px gray;
-  padding: 25px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background: white;
+border-radius: 5px;
+width: 95%;
+max-width: 500px;
+margin: 20px 0;
+-moz-box-shadow: 0 0 10px 2px gray;
+-webkit-box-shadow: 0 0 10px 2px gray;
+padding: 25px;
 }
 
 #book-form h2 {
-  align-self: center;
-  margin-bottom: 15px;
+align-self: center;
+margin-bottom: 15px;
 }
 
 #book-form input {
-  margin: 3px 0;
-  padding: 3px;
+margin: 3px 0;
+padding: 3px;
 }
 
 #books-submit-button {
-  align-self: center;
+align-self: center;
 }
 
 
 /*checkedOut spans*/
 .checker:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
+
+
+/* styling for Login page */
+
+.login {
+color:  blue;
+width: 600px;
+position: absolute;
+top: 20%;
+left: 50%;
+width: 600px;
+padding: 20px;
+transform: translate(-50%, -50%);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#login-form {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background: white;
+border-radius: 5px;
+width: 95%;
+max-width: 500px;
+margin: 20px 0;
+-moz-box-shadow: 0 0 10px 2px gray;
+-webkit-box-shadow: 0 0 10px 2px gray;
+padding: 25px;
+}
+
+#login-form input {
+margin: 3px 0;
+padding: 3px;
+}
+
+#login-submit-button {
+align-self: center;
+cursor: pointer;
+}
+
+/* styling for Signup page */
