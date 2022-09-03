@@ -12,7 +12,7 @@
     <section class="row">
         <section class="column">
               <h1>Books</h1>       
-              <h2 class="left"><%= user.userName %> has <%= left %> books available.</h2>
+              <h2 class="left"><%= user.userName %> has <%= left %> <%= left === 1 ? 'book' : 'books'%> available.</h2>
               <form id="book-form" action="/books/createBook" method='POST'>
               <h2>Add a Book</h2>
                 <div>
@@ -45,10 +45,10 @@
               <ul>
                   <% books.forEach( el => { %>
                   <li class='book-list' data-id='<%=el._id%>'>
-                    <span id="title"><%= el.title %></span>
-                    <span id="author"><%= el.author %></span>
-                    <span id='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn' %>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
-                    <span id='del'> Delete </span>
+                    <span class="title"><%= el.title %></span>
+                    <span class="author"><%= el.author %></span>
+                    <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn' %>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
+                    <span class='del'> Delete </span>
                   </li>
                   <% }) %>
               </ul>
