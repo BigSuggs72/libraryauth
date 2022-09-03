@@ -59,7 +59,7 @@ padding-bottom: 10px;
 list-style: none;
 }
 
-#title, #author, #checker, #del {
+.title, .author, .checker, .del {
 padding-right: 20px;
 }
 
