@@ -9,32 +9,37 @@
     <title>INDEX</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a class="logo" href="/"><img src="/images/digital-books-logo.png"><span>Knowledge World</span></a>
-            <ul>
-                <% if (currentUser) { %>
-                    <li><a href="/logout"> Logout</a></li>
-                <% } else { %>
-                    <li><a href="/login"> Login</a></li>
-                    <li><a href="/signup"> Signup</a></li>
-                    <% }
-                %>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Knowledge World</h1>
-            <section class="btn-group">
-                <a href="/login" class="btn-primary"> Login</a>
-                <a href="/signup" class="btn-primary"> Signup</a>
+    <div class="page-wrapper">
+        <header>
+            <nav>
+                <a class="logo" href="/">
+                    <img src="/images/digital-books-logo.png">
+                    <span>Knowledge World</span>
+                </a>
+                <ul>
+                    <% if (currentUser) { %>
+                        <li><a href="/logout"> Logout</a></li>
+                    <% } else { %>
+                        <li><a href="/login"> Login</a></li>
+                        <li><a href="/signup"> Signup</a></li>
+                        <% }
+                    %>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <h1>Knowledge World</h1>
+                <section class="btn-group">
+                    <a href="/login" class="btn-primary"> Login</a>
+                    <a href="/signup" class="btn-primary"> Signup</a>
+                </section>
             </section>
-        </section>
-    </main>    
-    <footer>
-        
-    </footer>
+        </main>    
+        <footer>
+            <span>Github</span>
+        </footer>
+    </div>
     <script src ='/js/main.js'></script>
 </body>
 </html>

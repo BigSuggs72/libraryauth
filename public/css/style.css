@@ -9,17 +9,39 @@ body {
   font-family: "Edu TAS Beginner", sans-serif;
 }
 
-/* header styling */
+/* grid layout for index page */
+
+.page-wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 4rem 1fr 4rem;
+  grid-template-columns: auto;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* header/nav styling */
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0; 
-  right: 0;
-  padding: 1rem;
-  height: 4rem;
   display: flex;
   justify-content: space-between;
+  min-height: 100%;
+  max-height: 100%;
+  padding: 1rem;
   background-color: #8be1f0;
 }
 
@@ -31,7 +53,7 @@ nav {
 
 .logo img {
   max-height: 100%;
-  width: auto;
+  max-width: 35px;
 }
 
 nav ul {
@@ -52,18 +74,19 @@ nav a:visited {
   color: #000;
 }
 
+/* footer styling */
+
+footer {
+  padding: 1rem;
+  display: flex;
+  background-color: #000;
+}
+
 /* styling for Index page */
 
 .hero {
   color: white;
-  width: 600px;
-  margin-top: 4rem; /* to clear space for fixed header */
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 600px;
   padding: 20px;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
