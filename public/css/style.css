@@ -62,11 +62,22 @@ nav ul {
   gap: 2rem;
 }
 
+/* footer styling */
+
+footer {
+  padding: 1rem;
+  display: flex;
+  background-color: #000;
+  color: #fff;
+}
+
+/* link styling */
+
 nav li {
   list-style-type: none;
 }
 
-nav a {
+nav a, footer a {
   text-decoration: none;
 }
 
@@ -74,12 +85,8 @@ nav a:visited {
   color: #000;
 }
 
-/* footer styling */
-
-footer {
-  padding: 1rem;
-  display: flex;
-  background-color: #000;
+footer a:visited {
+  color: #fff;
 }
 
 /* styling for Index page */
