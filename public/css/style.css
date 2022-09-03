@@ -5,7 +5,6 @@
 }
 
 body {
-  background: rgb(175, 175, 191);
   font-family: "Edu TAS Beginner", sans-serif;
 }
 
@@ -14,7 +13,7 @@ body {
 .page-wrapper {
   height: 100vh;
   display: grid;
-  grid-template-rows: 4rem 1fr 4rem;
+  grid-template-rows: 5rem 1fr 4rem;
   grid-template-columns: auto;
   grid-template-areas: 
     "header"
@@ -42,13 +41,15 @@ nav {
   min-height: 100%;
   max-height: 100%;
   padding: 1rem;
-  background-color: #8be1f0;
+  background-color: #fafafa;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: .5rem;
+  color: #264653;
+  font-weight: 600;
 }
 
 .logo img {
@@ -59,7 +60,7 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* footer styling */
@@ -67,7 +68,7 @@ nav ul {
 footer {
   padding: 1rem;
   display: flex;
-  background-color: #000;
+  background-color: #264653;
   color: #fff;
 }
 
@@ -78,51 +79,75 @@ nav li {
 }
 
 nav a, footer a {
+  color: #F7F7F7;
   text-decoration: none;
 }
 
-nav a:visited {
+/* nav a:visited {
   color: #000;
-}
+} */
 
 footer a:visited {
   color: #fff;
 }
 
 .btn-link {
-  background: #8be1f0;
+  background: #008F95;
   color: #000;
   border-radius: 10px;
   padding: .5rem 1.5rem;
-  font-size: 1.5rem;
   text-decoration: none;
 }
 
 .btn-link:hover {
-  background: #ade0e9;
+  /* background: #ade0e9; */
   color: #000;
 }
 
-.btn-group {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+.cta {
+  background-color: #F7B733;
 }
 
 /* styling for Index page */
 
+.main-wrapper {
+  position: relative;
+}
+
+.main-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(100% 0, 0 0, 0 35%);
+  background-color: #E24E42;
+  z-index: -1;
+}
+
 .hero {
-  color: white;
-  padding: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 20px 20px 20px;
+  color: #000;
 }
 
 h1 {
-  margin-bottom: 20px;
-  padding: 10px;
-  font-size: 4rem;
+  padding: 20px 10px 10px 10px;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.lottie-container {
+  border-radius: 25%;
+  overflow: hidden;
+  margin: 1rem;
 }
 
 /* styling for Books page */
