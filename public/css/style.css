@@ -5,15 +5,209 @@
 }
 
 body {
-  background: rgb(175, 175, 191);
   font-family: "Edu TAS Beginner", sans-serif;
 }
 
+/* grid layout for index page */
+
+.page-wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 5rem 1fr 4rem;
+  grid-template-columns: auto;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* header/nav styling */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100%;
+  max-height: 100%;
+  padding: 1rem;
+  background-color: #F7F7F7;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #264653;
+  font-weight: 600;
+}
+
+.logo img {
+  max-height: 100%;
+  max-width: 35px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* footer styling */
+
+footer {
+  padding: 1rem;
+  display: flex;
+  background-color: #264653;
+  color: #fff;
+}
+
+/* link styling */
+
+nav li {
+  list-style-type: none;
+}
+
+nav a, footer a {
+  color: #F7F7F7;
+  text-decoration: none;
+}
+
+/* nav a:visited {
+  color: #000;
+} */
+
+footer a:visited {
+  color: #fff;
+}
+
+.btn-link {
+  background: #008F95;
+  color: #000;
+  border-radius: 10px;
+  padding: .5rem 1.5rem;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  /* background: #ade0e9; */
+  color: #000;
+}
+
+.cta {
+  background-color: #F7B733;
+}
 
 /* styling for Index page */
 
-.layout {
-  color: white;
+.accent-spacer {    /*This is the skinny orange triangle*/
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+  background-color: #E24E42;
+  height: 10rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0px 20px 20px 20px;
+  color: #000;
+}
+
+h1 {
+  padding: 20px 0 10px 0;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.lottie-container {
+  border-radius: 25%;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+/* styling for Books page */
+
+.row{
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding-left: 2%;
+}
+
+.inventory {
+  margin-top: 120px;
+  padding-bottom: 10px;
+}
+
+.book-list {
+  list-style: none;
+}
+
+.title, .author, .checker, .del {
+  padding-right: 20px;
+}
+
+
+#book-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: white;
+  border-radius: 5px;
+  width: 95%;
+  max-width: 500px;
+  margin: 20px 0;
+  -moz-box-shadow: 0 0 10px 2px gray;
+  -webkit-box-shadow: 0 0 10px 2px gray;
+  box-shadow: 0 0 10px 2px gray;
+  padding: 25px;
+}
+
+#book-form h2 {
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+#book-form input {
+  margin: 3px 0;
+  padding: 3px;
+}
+
+#books-submit-button {
+  align-self: center;
+}
+
+
+/*checkedOut spans*/
+.checker:hover {
+  cursor: pointer;
+}
+
+
+/* styling for Login and Signup pages */
+
+.login, .signup {
+  color:  blue;
   width: 600px;
   position: absolute;
   top: 20%;
@@ -26,116 +220,25 @@ body {
   align-items: center;
 }
 
-h1 {
-  margin-bottom: 20px;
-  padding: 10px;
-  font-size: 4rem;
+#login-form, #signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: white;
+  border-radius: 5px;
+  width: 95%;
+  max-width: 500px;
+  margin: 20px 0;
+  padding: 25px;
 }
 
-a {
-  padding: 20px;
-  font-size: 1rem;
+#login-form input, #signup-form input {
+  margin: 3px 0;
+  padding: 3px;
 }
 
-
-
-/* styling for Books page */
-
-.row{
-display: flex;
-}
-
-.column {
-flex: 50%;
-padding-left: 2%;
-}
-
-.inventory {
-margin-top: 120px;
-padding-bottom: 10px;
-}
-
-.book-list {
-list-style: none;
-}
-
-.title, .author, .checker, .del {
-padding-right: 20px;
-}
-
-
-#book-form {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-background: white;
-border-radius: 5px;
-width: 95%;
-max-width: 500px;
-margin: 20px 0;
--moz-box-shadow: 0 0 10px 2px gray;
--webkit-box-shadow: 0 0 10px 2px gray;
-box-shadow: 0 0 10px 2px gray;
-padding: 25px;
-}
-
-#book-form h2 {
-align-self: center;
-margin-bottom: 15px;
-}
-
-#book-form input {
-margin: 3px 0;
-padding: 3px;
-}
-
-#books-submit-button {
-align-self: center;
-}
-
-
-/*checkedOut spans*/
-.checker:hover {
+#login-submit-button, #signup-submit-button {
+  align-self: center;
   cursor: pointer;
 }
 
-
-/* styling for Login page */
-
-.login {
-color:  blue;
-width: 600px;
-position: absolute;
-top: 20%;
-left: 50%;
-width: 600px;
-padding: 20px;
-transform: translate(-50%, -50%);
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-#login-form {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-background: white;
-border-radius: 5px;
-width: 95%;
-max-width: 500px;
-margin: 20px 0;
-padding: 25px;
-}
-
-#login-form input {
-margin: 3px 0;
-padding: 3px;
-}
-
-#login-submit-button {
-align-self: center;
-cursor: pointer;
-}
-
-/* styling for Signup page */

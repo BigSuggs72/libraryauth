@@ -4,18 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>INDEX</title>
 </head>
 <body>
-    <section class="layout">
-        <h1>Knowledge World</h1>
-        <section class="knowledge">
-            <a href="/login"> Login</a>
-            <a href="/signup"> Signup</a>
-        </section>
-    </section>    
+    <div class="page-wrapper">
+        <header>
+            <nav>
+                <a class="logo" href="/">
+                    <img src="/images/books-stack-of-three-svgrepo-com.svg">
+                    <span>Knowledge World</span>
+                </a>
+                <ul>
+                    <% if (currentUser) { %>
+                        <li><a href="/logout" class="btn-link"> Logout</a></li>
+                    <% } else { %>
+                        <li><a href="/login" class="btn-link"> Login</a></li>
+                        <li><a href="/signup" class="btn-link cta"> Signup</a></li>
+                        <% }
+                    %>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="accent-spacer"></div>
+            <section class="hero">
+                <div class="header-container">
+                    <h1>Knowledge World</h1>
+                    <h2>Your digital library</h2>
+                    <a href="/signup" class="btn-link"> Start collecting</a>
+                </div>
+                <div class="lottie-container">
+                    <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_ygsplxrn.json" background="#F7B733"  speed="1"  style="width: 300px; height: 300px;" autoplay></lottie-player>
+                </div>
+            </section>
+        </main>    
+        <footer>
+            <a href="https://github.com/BigSuggs72/libraryauth" target="_blank">View on Github</a>
+        </footer>
+    </div>
     <script src ='/js/main.js'></script>
 </body>
 </html>
