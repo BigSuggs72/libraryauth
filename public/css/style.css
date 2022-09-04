@@ -181,7 +181,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: white;
+  background: #fff;
   border-radius: 5px;
   width: 95%;
   max-width: 500px;
@@ -218,12 +218,6 @@ h2 {
 .login, .signup {
   color:  blue;
   width: 600px;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 600px;
-  padding: 20px;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,7 +227,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: white;
+  background: #fff;
   border-radius: 5px;
   width: 95%;
   max-width: 500px;
