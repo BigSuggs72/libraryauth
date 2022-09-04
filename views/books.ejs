@@ -36,8 +36,13 @@
     <main>
       <section class="row">
           <section class="column">
+<<<<<<< HEAD
                 <h1>Welcome!</h1>
                 <h2 class="available"><%= user.userName %> has <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
+=======
+                <h1>Books</h1>
+                <h2 class="available">Hi, <%= user.firstName %>! You have <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
+>>>>>>> 0ed48073ac276cee5ee3197ed720925a70401885
                 <form id="book-form" action="/books/createBook" method='POST'>
                 <h2>Add a Book</h2>
                   <div>
