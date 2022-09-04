@@ -12,51 +12,73 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="row">
-        <section class="column">
-              <h1>Books</h1>
-              <h2 class="available"><%= user.userName %> has <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
-              <form id="book-form" action="/books/createBook" method='POST'>
-              <h2>Add a Book</h2>
-                <div>
-                  <label for="bookItem">Book Title:</label>
-                  <input type="text" placeholder="Title" id="bookItem" name='bookItem' required>
-                </div>
-                <div>
-                  <label for="bookAuthor">Book Author:</label>
-                  <input type="text" placeholder="Author's Name" id="bookAuthor" name='bookAuthor' required>
-                </div>
-                <div>
-                  <label for="bookDescription">Book Description:</label>
-                  <input type="text" placeholder="Description" id="bookDescription" name='bookDescription'>
-                </div>
-                <div>
-                  <label for="bookSubjects">Book Genre/Subjects:</label>
-                  <input type="text" placeholder="Subject or Genre" id="bookSubjects" name='bookSubjects'>
-                </div>
-                <div>
-                  <label for="bookNotes">Notes about Book:</label>
-                  <input type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
-                </div>
-                  <input id="books-submit-button" type="submit">
-                </form>
-
-                <a href="/logout">Logout</a>
-        </section>
-        <section class="column">
-              <h2 class="inventory">Catalogue:</h2>
-              <ul>
-                  <% books.forEach( el => { %>
-                  <li class='book-list' data-id='<%=el._id%>'>
-                    <span class="title"><%= el.title %></span>
-                    <span class="author"><%= el.author %></span>
-                    <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn'%>'>Checkout Status:<%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
-                    <span class='del fa fa-trash'></span>
-                  </li>
-                  <% }) %>
-              </ul>
-        </section>
-    </section>
+  <div class="page-wrapper">
+    <header>
+        <nav>
+            <a class="logo" href="/">
+                <img src="/images/books-stack-of-three-svgrepo-com.svg">
+                <span>Knowledge World</span>
+            </a>
+            <ul>
+                <% if (currentUser) { %>
+                    <li><a href="/logout" class="btn-link btn-primary"> Logout</a></li>
+                <% } else { %>
+                    <li><a href="/login" class="btn-link btn-primary"> Login</a></li>
+                    <li><a href="/signup" class="btn-link btn-secondary"> Signup</a></li>
+                    <% }
+                %>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <section class="row">
+          <section class="column">
+                <h1>Books</h1>
+                <h2 class="available"><%= user.userName %> has <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
+                <form id="book-form" action="/books/createBook" method='POST'>
+                <h2>Add a Book</h2>
+                  <div>
+                    <label for="bookItem">Book Title:</label>
+                    <input type="text" placeholder="Title" id="bookItem" name='bookItem' required>
+                  </div>
+                  <div>
+                    <label for="bookAuthor">Book Author:</label>
+                    <input type="text" placeholder="Author's Name" id="bookAuthor" name='bookAuthor' required>
+                  </div>
+                  <div>
+                    <label for="bookDescription">Book Description:</label>
+                    <input type="text" placeholder="Description" id="bookDescription" name='bookDescription'>
+                  </div>
+                  <div>
+                    <label for="bookSubjects">Book Genre/Subjects:</label>
+                    <input type="text" placeholder="Subject or Genre" id="bookSubjects" name='bookSubjects'>
+                  </div>
+                  <div>
+                    <label for="bookNotes">Notes about Book:</label>
+                    <input type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
+                  </div>
+                    <input id="books-submit-button" type="submit">
+                  </form>
+          </section>
+          <section class="column">
+                <h2 class="inventory">Catalogue:</h2>
+                <ul>
+                    <% books.forEach( el => { %>
+                    <li class='book-list' data-id='<%=el._id%>'>
+                      <span class="title"><%= el.title %></span>
+                      <span class="author"><%= el.author %></span>
+                      <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn'%>'>Checkout Status:<%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
+                      <span class='del fa fa-trash'></span>
+                    </li>
+                    <% }) %>
+                </ul>
+          </section>
+      </section>
+    </main>
+    <footer>
+      <a href="https://github.com/BigSuggs72/libraryauth" target="_blank">View on Github</a>
+    </footer>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -11,6 +11,25 @@
     <title>SIGN UP</title>
 </head>
 <body>
+    <div class="page-wrapper">
+        <header>
+            <nav>
+                <a class="logo" href="/">
+                    <img src="/images/books-stack-of-three-svgrepo-com.svg">
+                    <span>Knowledge World</span>
+                </a>
+                <ul>
+                    <% if (currentUser) { %>
+                        <li><a href="/logout" class="btn-link btn-primary"> Logout</a></li>
+                    <% } else { %>
+                        <li><a href="/login" class="btn-link btn-primary"> Login</a></li>
+                        <li><a href="/signup" class="btn-link btn-secondary"> Signup</a></li>
+                        <% }
+                    %>
+                </ul>
+            </nav>
+        </header>
+        <main>
 
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
@@ -27,8 +46,12 @@
             <input type="password" name="confirmPassword" placeholder="Confirm Password">
             <input id="signup-submit-button" type="submit">
         </form>
-    </section>  
-
+    </section> 
+    </main> 
+    <footer>
+        <a href="https://github.com/BigSuggs72/libraryauth" target="_blank">View on Github</a>
+      </footer>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
