@@ -17,12 +17,16 @@
     "express": "^4.18.1",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.3",
+    "flash": "^1.1.0",
     "mongodb": "^3.7.3",
     "mongoose": "^5.13.15",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.19",
+    "node": "^16.17.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
