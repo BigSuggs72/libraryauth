@@ -87,6 +87,10 @@ footer a:visited {
   color: #fff;
 }
 
+.header-container h2 {
+  margin-bottom: 2vh;
+}
+
 .btn-link {
   border-radius: 10px;
   padding: .5rem 1.5rem;
@@ -132,14 +136,14 @@ footer a:visited {
 }
 
 h1 {
-  padding: 20px 0 10px 0;
+  padding: 0 0 10px 0;
   font-size: 3.5rem;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 2.5rem;
+  /* margin-bottom: 2.5rem; */
 }
 
 .lottie-container {
@@ -152,6 +156,7 @@ h2 {
 
 .row{
   display: flex;
+  margin-top: 4vh;
 }
 
 .column {
@@ -160,8 +165,8 @@ h2 {
 }
 
 .inventory {
-  margin-top: 120px;
-  padding-bottom: 10px;
+  /* margin-top: 120px; */
+  padding-bottom: 1.5vh;
 }
 
 .book-list {
@@ -243,6 +248,27 @@ h2 {
   padding: 25px;
 }
 
+#book-form input, button {
+  font-family: "Edu TAS Beginner", sans-serif;
+  font-size: 1.25rem;
+}
+
+#books-submit-button {
+  background-color: #264653;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#books-submit-button:hover {
+  background-color: #008F95;
+}
+
+#book-form label {
+  display: flex;
+  align-items: center;
+}
+
 #book-form h2 {
   align-self: center;
   margin-bottom: 15px;
@@ -252,6 +278,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  vertical-align: middle;
 }
 
 .input-field {

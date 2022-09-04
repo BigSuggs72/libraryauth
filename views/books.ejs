@@ -36,29 +36,29 @@
                 <h1>Books</h1>
                 <h2 class="available">Hi, <%= user.firstName %>! You have <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
                 <form id="book-form" action="/books/createBook" method='POST'>
-                <h2>Add a Book</h2>
-                  <div>
-                    <label for="bookItem">Book Title:</label>
-                    <input class="input-field" type="text" placeholder="Title" id="bookItem" name='bookItem' required>
-                  </div>
-                  <div>
-                    <label for="bookAuthor">Book Author:</label>
-                    <input class="input-field" type="text" placeholder="Author's Name" id="bookAuthor" name='bookAuthor' required>
-                  </div>
-                  <div>
-                    <label for="bookDescription">Book Description:</label>
-                    <input class="input-field" type="text" placeholder="Description" id="bookDescription" name='bookDescription'>
-                  </div>
-                  <div>
-                    <label for="bookSubjects">Book Genre/Subjects:</label>
-                    <input class="input-field" type="text" placeholder="Subject or Genre" id="bookSubjects" name='bookSubjects'>
-                  </div>
-                  <div>
-                    <label for="bookNotes">Notes about Book:</label>
-                    <input class="input-field" type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
-                  </div>
-                    <input id="books-submit-button" type="submit">
-                  </form>
+                  <h2>Add a Book</h2>
+                    <div>
+                      <label for="bookItem">Book Title:</label>
+                      <input class="input-field" type="text" placeholder="Title" id="bookItem" name='bookItem' required>
+                    </div>
+                    <div>
+                      <label for="bookAuthor">Book Author:</label>
+                      <input class="input-field" type="text" placeholder="Author's Name" id="bookAuthor" name='bookAuthor' required>
+                    </div>
+                    <div>
+                      <label for="bookDescription">Book Description:</label>
+                      <input class="input-field" type="text" placeholder="Description" id="bookDescription" name='bookDescription'>
+                    </div>
+                    <div>
+                      <label for="bookSubjects">Book Genre/Subjects:</label>
+                      <input class="input-field" type="text" placeholder="Subject or Genre" id="bookSubjects" name='bookSubjects'>
+                    </div>
+                    <div>
+                      <label for="bookNotes">Notes about Book:</label>
+                      <input class="input-field" type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
+                    </div>
+                      <input id="books-submit-button" type="submit">
+                </form>
           </section>
           <section class="column">
                 <h2 class="inventory">Catalogue:</h2>
