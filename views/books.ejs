@@ -20,23 +20,23 @@
               <h2>Add a Book</h2>
                 <div>
                   <label for="bookItem">Book Title:</label>
-                  <input type="text" placeholder="Title" id="bookItem" name='bookItem' required>
+                  <input class="input-field" type="text" placeholder="Title" id="bookItem" name='bookItem' required>
                 </div>
                 <div>
                   <label for="bookAuthor">Book Author:</label>
-                  <input type="text" placeholder="Author's Name" id="bookAuthor" name='bookAuthor' required>
+                  <input class="input-field" type="text" placeholder="Author's Name" id="bookAuthor" name='bookAuthor' required>
                 </div>
                 <div>
                   <label for="bookDescription">Book Description:</label>
-                  <input type="text" placeholder="Description" id="bookDescription" name='bookDescription'>
+                  <input class="input-field" type="text" placeholder="Description" id="bookDescription" name='bookDescription'>
                 </div>
                 <div>
                   <label for="bookSubjects">Book Genre/Subjects:</label>
-                  <input type="text" placeholder="Subject or Genre" id="bookSubjects" name='bookSubjects'>
+                  <input class="input-field" type="text" placeholder="Subject or Genre" id="bookSubjects" name='bookSubjects'>
                 </div>
                 <div>
                   <label for="bookNotes">Notes about Book:</label>
-                  <input type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
+                  <input class="input-field" type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
                 </div>
                   <input id="books-submit-button" type="submit">
                 </form>
@@ -52,6 +52,18 @@
                     <span class="author"><%= el.author %></span>
                     <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn'%>'>Checkout Status:<%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
                     <span class='del fa fa-trash'></span>
+                    <span class="extend">+</span>
+                    <div class="extended-view hidden">
+                      <div class="extended-header">
+                        <span id="extended-header-title">MORE INFO</span>
+                        <span class="minimize">-</span>
+                      </div>
+                      <span>BOOK TITLE: <%= el.title %></span>
+                      <span>AUTHOR'S NAME: <%= el.author %></span>
+                      <span>BOOK DESCRIPTION: <%= el.description %></span>
+                      <span>BOOK SUBJECTS/GENRE: <%= el.subjects %></span>
+                      <span>NOTES: <%= el.notes %></span>
+                    </div>
                   </li>
                   <% }) %>
               </ul>

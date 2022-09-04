@@ -161,6 +161,7 @@ h2 {
 
 .book-list {
   list-style: none;
+  margin: 10px 0;
 }
 
 .title, .author, .checker, .del {
@@ -171,11 +172,60 @@ h2 {
   cursor: pointer;
 }
 
+/* styling for extended sections with extra book info */
+
+.extend {
+  font-family: sans-serif;
+  border: 1px solid black;
+  padding: 0 4px;
+  cursor: pointer;
+}
+
+.minimize {
+  align-self: flex-end;
+  font-family: sans-serif;
+  border: 1px solid black;
+  padding: 0px 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.extended-view {
+  font-family: serif;
+  font-size: 0.8rem;
+  background: lightgray;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 20px 10px 0;
+  padding: 0 10px 10px 10px;
+}
+
+.extended-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#extended-header-title {
+  text-decoration: underline;
+}
+
+.extended-view span {
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* styling for the form to add books */
 
 #book-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   background: white;
   border-radius: 5px;
   width: 95%;
@@ -192,13 +242,24 @@ h2 {
   margin-bottom: 15px;
 }
 
-#book-form input {
-  margin: 3px 0;
+#book-form div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input-field {
+  width: 50%;
+  margin-bottom: 5px;
+  margin-left: 10px;
   padding: 3px;
 }
 
 #books-submit-button {
+  width: 25%;
   align-self: center;
+  margin-left: 0;
+  margin-top: 10px;
 }
 
 
