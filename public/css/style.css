@@ -83,29 +83,34 @@ nav a, footer a {
   text-decoration: none;
 }
 
-/* nav a:visited {
-  color: #000;
-} */
-
 footer a:visited {
   color: #fff;
 }
 
 .btn-link {
-  background: #008F95;
-  color: #000;
   border-radius: 10px;
   padding: .5rem 1.5rem;
   text-decoration: none;
 }
 
-.btn-link:hover {
-  /* background: #ade0e9; */
+.btn-primary {
+  background: #008F95;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #F7B733;
   color: #000;
 }
 
-.cta {
-  background-color: #F7B733;
+.btn-primary:hover {
+  background: #ade0e9;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background: #f4d79d;
+  color: #000;
 }
 
 /* styling for Index page */
