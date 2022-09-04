@@ -15,7 +15,7 @@ body {
   display: grid;
   grid-template-rows: 5rem 1fr 4rem;
   grid-template-columns: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "header"
     "main"
     "footer";
@@ -167,6 +167,10 @@ h2 {
   padding-right: 20px;
 }
 
+.del {
+  cursor: pointer;
+}
+
 
 #book-form {
   display: flex;
@@ -241,4 +245,3 @@ h2 {
   align-self: center;
   cursor: pointer;
 }
-
