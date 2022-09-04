@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOOKS</title>
+    <title>Your Catalogue</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="/images/books-stack-of-three-svgrepo-com.svg">
+    <!--Fonts and Styles-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,7 +36,7 @@
     <main>
       <section class="row">
           <section class="column">
-                <h1>Books</h1>
+                <h1>Welcome!</h1>
                 <h2 class="available"><%= user.userName %> has <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
                 <form id="book-form" action="/books/createBook" method='POST'>
                 <h2>Add a Book</h2>
@@ -67,7 +70,7 @@
                     <li class='book-list' data-id='<%=el._id%>'>
                       <span class="title"><%= el.title %></span>
                       <span class="author"><%= el.author %></span>
-                      <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn'%>'>Checkout Status:<%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
+                      <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn'%>'>Checkout Status: <%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
                       <span class='del fa fa-trash'></span>
                       <span class="extend">+</span>
                       <div class="extended-view hidden">

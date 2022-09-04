@@ -281,18 +281,31 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#login-form, #signup-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   background: #fff;
   border-radius: 5px;
   width: 95%;
   max-width: 500px;
   margin: 20px 0;
+  -moz-box-shadow: 0 0 10px 2px gray;
+  -webkit-box-shadow: 0 0 10px 2px gray;
+  box-shadow: 0 0 10px 2px gray;
   padding: 25px;
+}
+
+#login-form, #signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  width: 95%;
+  max-width: 350px;
+  margin: 20px auto;
+  padding: 25px;
+}
+
+#login-form {
+  align-items: center;
 }
 
 #login-form input, #signup-form input {
@@ -303,4 +316,12 @@ h2 {
 #login-submit-button, #signup-submit-button {
   align-self: center;
   cursor: pointer;
+  font-family: "Edu TAS Beginner", sans-serif;
+  width: 60px;
+  height: 26px;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
 }
+
