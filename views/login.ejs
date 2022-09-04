@@ -10,7 +10,26 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>LOGIN</title>
 </head>
-<body>
+<body>  
+    <div class="page-wrapper">
+    <header>
+        <nav>
+            <a class="logo" href="/">
+                <img src="/images/books-stack-of-three-svgrepo-com.svg">
+                <span>Knowledge World</span>
+            </a>
+            <ul>
+                <% if (currentUser) { %>
+                    <li><a href="/logout" class="btn-link btn-primary"> Logout</a></li>
+                <% } else { %>
+                    <li><a href="/login" class="btn-link btn-primary"> Login</a></li>
+                    <li><a href="/signup" class="btn-link btn-secondary"> Signup</a></li>
+                    <% }
+                %>
+            </ul>
+        </nav>
+    </header>
+    <main>
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
@@ -29,7 +48,12 @@
             <input type="password" name="password" placeholder="Password">
             <input id="login-submit-button" type="submit">
         </form>
-    </section>    
+    </section>
+    </main>
+    <footer>
+        <a href="https://github.com/BigSuggs72/libraryauth" target="_blank">View on Github</a>
+      </footer>
+    </div>    
     <script src="js/main.js"></script>
 </body>
 </html>
