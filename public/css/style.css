@@ -175,6 +175,7 @@ h2 {
 
 .del {
   cursor: pointer;
+  color: red
 }
 
 /* styling for extended sections with extra book info */
