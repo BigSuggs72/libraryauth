@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <section class="row">
         <section class="column">
-              <h1>Books</h1>       
+              <h1>Books</h1>
               <h2 class="available"><%= user.userName %> has <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
               <form id="book-form" action="/books/createBook" method='POST'>
               <h2>Add a Book</h2>
@@ -50,7 +51,7 @@
                     <span class="title"><%= el.title %></span>
                     <span class="author"><%= el.author %></span>
                     <span class='checker <%= el.checkedOut === true ? 'checkedOut' : 'checkedIn'%>'>Checkout Status:<%= el.checkedOut === true ? 'Checked Out' : 'Available'%></span>
-                    <span class='del'> Delete </span>
+                    <span class='del fa fa-trash'></span>
                   </li>
                   <% }) %>
               </ul>
