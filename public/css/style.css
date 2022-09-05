@@ -87,10 +87,6 @@ footer a:visited {
   color: #fff;
 }
 
-.header-container h2 {
-  margin-bottom: 2vh;
-}
-
 .btn-link {     /* used on <a> tags styled as buttons */
   border-radius: 10px;
   padding: .5rem 1.5rem;
@@ -155,7 +151,10 @@ h1 {
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  /* margin-bottom: 2.5rem; */
+}
+
+.heading-container h2 {
+  margin-bottom: 2.5rem;
 }
 
 .lottie-container {
