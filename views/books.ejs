@@ -37,7 +37,7 @@
       <section class="row">
           <section class="column">
                 <h1>Welcome!</h1>
-                <h2 class="available"><%= user.userName %> has <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
+                <h2 class="available"><%= user.firstName %> has <%= available %> <%= available === 1 ? 'book' : 'books'%> available.</h2>
                 <form id="book-form" action="/books/createBook" method='POST'>
                   <h2>Add a Book</h2>
                     <div>
@@ -60,7 +60,7 @@
                       <label for="bookNotes">Notes about Book:</label>
                       <input class="input-field" type="text" placeholder="Notes" id="bookNotes" name='bookNotes'>
                     </div>
-                      <input id="books-submit-button" type="submit">
+                      <input class="btn-submit btn-primary" type="submit">
                 </form>
           </section>
           <section class="column">
