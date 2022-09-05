@@ -72,7 +72,7 @@ footer {
   color: #fff;
 }
 
-/* link styling */
+/* link and button styling */
 
 nav li {
   list-style-type: none;
@@ -87,13 +87,21 @@ footer a:visited {
   color: #fff;
 }
 
-.header-container h2 {
-  margin-bottom: 2vh;
-}
-
-.btn-link {
+.btn-link {     /* used on <a> tags styled as buttons */
   border-radius: 10px;
   padding: .5rem 1.5rem;
+  text-decoration: none;
+}
+
+/* used on all form-submit buttons (login, signup, books) */
+.btn-submit {      
+  border-radius: 10px;
+  padding: .5rem 1.5rem;
+  font: inherit;  
+  cursor: pointer;
+  border: none;
+  align-self: center;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -143,7 +151,10 @@ h1 {
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  /* margin-bottom: 2.5rem; */
+}
+
+.heading-container h2 {
+  margin-bottom: 2.5rem;
 }
 
 .lottie-container {
@@ -154,7 +165,7 @@ h2 {
 
 /* styling for Books page */
 
-.row{
+.row {
   display: flex;
   margin-top: 4vh;
 }
@@ -231,6 +242,19 @@ h2 {
   display: none;
 }
 
+/* General styling for forms */
+
+input[type="text"], input[type="email"], input[type="password"] {
+  font-family: "Edu TAS Beginner", sans-serif;
+  font-size: 1.25rem;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  width: 15rem;
+  height: 2rem;
+  border: 1px solid #889397;
+  border-radius: 3px;
+}
+
 /* styling for the form to add books */
 
 #book-form {
@@ -246,22 +270,6 @@ h2 {
   -webkit-box-shadow: 0 0 10px 2px gray;
   box-shadow: 0 0 10px 2px gray;
   padding: 25px;
-}
-
-#book-form input, button {
-  font-family: "Edu TAS Beginner", sans-serif;
-  font-size: 1.25rem;
-}
-
-#books-submit-button {
-  background-color: #264653;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-#books-submit-button:hover {
-  background-color: #008F95;
 }
 
 #book-form label {
@@ -287,13 +295,6 @@ h2 {
   padding: 3px;
 }
 
-#books-submit-button {
-  width: 25%;
-  margin-top: 10px;
-  padding: 3px;
-}
-
-
 /*checkedOut spans*/
 .checker:hover {
   cursor: pointer;
@@ -303,7 +304,7 @@ h2 {
 /* styling for Login and Signup pages */
 
 .login, .signup {
-  color:  blue;
+  color: #000;
   width: 600px;
   display: flex;
   flex-direction: column;
@@ -335,20 +336,5 @@ h2 {
   align-items: center;
 }
 
-#login-form input, #signup-form input {
-  margin: 3px 0;
-  padding: 3px;
-}
 
-#login-submit-button, #signup-submit-button {
-  align-self: center;
-  cursor: pointer;
-  font-family: "Edu TAS Beginner", sans-serif;
-  width: 60px;
-  height: 26px;
-  font-size: 1rem;
-  border-radius: 10px;
-  text-decoration: none;
-  border: none;
-}
 
