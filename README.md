@@ -1,4 +1,4 @@
-Group Project commpleted by the following individuals:
+Group Project completed by the following individuals:
 
 
 
