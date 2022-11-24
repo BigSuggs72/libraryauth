@@ -12,6 +12,8 @@ const mainRoutes = require('./routes/main')
 const bookRoutes = require('./routes/books')
 
 require('dotenv').config({path: './config/.env'})
+// require('dotenv').config({path: '.env'})
+
 
 // Passport config
 require('./config/passport')(passport)
